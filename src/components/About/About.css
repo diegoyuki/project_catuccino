@@ -1,75 +1,70 @@
 .about {
-  background-color: #fdfaf5;
-  padding: 80px 0;
-  display: flex;
-  justify-content: center;
+  padding: 100px 0;
+  background-color: #F9F9F9; 
 }
 
 .about__container {
-  max-width: 1280px;
+  max-width: 1100px;
   width: 90%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 40px;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.about__content {
+  flex: 1;
 }
 
 .about__title {
   font-family: 'Inter', sans-serif;
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 40px;
-  margin: 0;
-  color: #1a1b22;
+  font-size: 38px;
+  font-weight: 700;
+  color: #4a3a35;
+  margin-bottom: 30px;
 }
 
-.about__content {
-  display: flex;
-  gap: 50px;
-  align-items: center;
-}
-
-.about__text-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.about__paragraph {
+.about__text {
   font-family: 'Inter', sans-serif;
   font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  margin: 0;
-  color: #1a1b22;
-}
-
-.about__image-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  line-height: 1.6;
+  color: #665a57;
+  margin-bottom: 20px;
 }
 
 .about__image {
+  flex: 1;
   width: 100%;
-  max-width: 464px;
-  border-radius: 50%;
+  max-width: 500px;
+  border-radius: 15px;
   object-fit: cover;
-  aspect-ratio: 1 / 1;
 }
 
-@media screen and (max-width: 768px) {
-  .about__content {
-    flex-direction: column-reverse;
-  }
+.about__button {
+  display: inline-block;
+  padding: 15px 35px;
+  border: 2px solid #dfcdb6;
+  border-radius: 50px;
+  color: #4a3a35;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
 
-  .about__title {
-    font-size: 30px;
-    line-height: 34px;
-    text-align: center;
-  }
+.about__button:hover {
+  background-color: #bc9e82;
+  border-color: #bc9e82;
+  color: #ffffff;
+}
 
-  .about__paragraph {
-    text-align: center;
+@media screen and (max-width: 800px) {
+  .about__container {
+    flex-direction: column;
+    padding: 30px;
   }
 }

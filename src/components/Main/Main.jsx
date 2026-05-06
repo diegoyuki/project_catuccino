@@ -1,25 +1,27 @@
 import React from 'react';
 import './Main.css';
+import videoSource from '../../images/hero-video.mp4';
 
-function Main() {
+function Main({ onSupportClick }) {
   return (
     <section className="main">
+      <video className="main__video" autoPlay loop muted playsInline>
+        <source src={videoSource} type="video/mp4" />
+        Tu navegador no soporta videos.
+      </video>
+
       <div className="main__container">
-        <h1 className="main__title">¿Buscas un café y un nuevo amigo?</h1>
+        <h1 className="main__title">Descubre la experiencia Catuccino</h1>
         <p className="main__subtitle">
-          Encuentra a tu compañero felino ideal en el mejor cat café de Monterrey.
+          Donde el aroma del café recién hecho se mezcla con el ronroneo de nuestros residentes felinos.
         </p>
-        <form className="main__search-form">
-          <input 
-            type="text" 
-            className="main__search-input" 
-            placeholder="Introduce una palabra clave..." 
-            required 
-          />
-          <button type="submit" className="main__search-button">
-            Buscar
-          </button>
-        </form>
+        <button 
+          type="button" 
+          className="main__support-button"
+          onClick={onSupportClick}
+        >
+          Apóyanos
+        </button>
       </div>
     </section>
   );

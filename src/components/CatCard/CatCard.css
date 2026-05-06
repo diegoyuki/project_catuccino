@@ -1,96 +1,75 @@
 .cat-card {
   background-color: #ffffff;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   position: relative;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .cat-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+}
+
+.cat-card__image-container {
+  position: relative;
+  width: 100%;
+  height: 400px; 
 }
 
 .cat-card__image {
   width: 100%;
-  height: 272px;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.cat-card__save-button {
+.cat-card__overlay {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-image: url('../../images/heartbutton.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.cat-card__save-button:hover {
-  background-color: #ffffff;
-}
-
-.cat-card__info {
-  padding: 24px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(74, 58, 53, 0.6); 
+  backdrop-filter: blur(2px); 
+  padding: 15px 25px;
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
 }
 
-.cat-card__date {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #b6bcbf;
-  margin: 0 0 12px 0;
+.cat-card:hover .cat-card__overlay {
+  background: rgba(74, 58, 53, 0.8);
 }
 
-.cat-card__title {
+.cat-card__name {
   font-family: 'Inter', sans-serif;
-  font-size: 26px;
-  font-weight: 900;
-  line-height: 30px;
-  color: #1a1b22;
-  margin: 0 0 16px 0;
-}
-
-.cat-card__description {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  color: #1a1b22;
-  margin: 0 0 18px 0;
-  flex: 1;
-}
-
-.cat-card__source {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #2f71e5;
+  color: #ffffff;
   margin: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .cat-card__image {
-    height: 196px;
-  }
+.cat-card__arrow {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
 
-  .cat-card__title {
-    font-size: 22px;
-    line-height: 26px;
+.cat-card:hover .cat-card__arrow {
+  transform: translateX(5px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .cat-card__image-container {
+    height: 300px;
   }
 }

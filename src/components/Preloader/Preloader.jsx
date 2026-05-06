@@ -1,11 +1,11 @@
 import React from 'react';
 import './Preloader.css';
+import logo from '../../images/logo.png';
 
 function Preloader() {
   return (
     <div className="preloader">
-      <i className="preloader__circle"></i>
-      <p className="preloader__text">Buscando gatitos...</p>
+      <img src={logo} alt="Loading..." className="preloader__logo" />
     </div>
   );
 }

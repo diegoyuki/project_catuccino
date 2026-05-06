@@ -1,0 +1,130 @@
+.menu {
+  padding: 120px 0;
+  background-color: #F9f9f9; 
+  position: relative;
+}
+
+.menu__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.menu__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #4a3a35;
+  margin-bottom: 65px;
+}
+
+.menu__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #665a57;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.menu__card {
+  background: #ffffff;
+  border-radius: 24px; 
+  overflow: hidden;
+  border: 1px solid rgba(223, 205, 182, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 20px rgba(74, 58, 53, 0.05);
+}
+
+.menu__card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(74, 58, 53, 0.12);
+  border-color: #bc9e82;
+}
+
+.menu__image-wrapper {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.menu__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.menu__card:hover .menu__card-image {
+  transform: scale(1.1);
+}
+
+.menu__card-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #bc9e82;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu__card-info {
+  padding: 30px;
+  text-align: left;
+}
+
+.menu__card-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1b22;
+  margin-bottom: 12px;
+}
+
+.menu__card-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #665a57;
+}
+
+.menu__main-button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #1a1b22;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px 50px;
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.menu__main-button:hover {
+  background-color: #bc9e82;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 15px 30px rgba(188, 158, 130, 0.3);
+}
+
+@media screen and (max-width: 1024px) {
+  .menu__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 650px) {
+  .menu__grid { grid-template-columns: 1fr; }
+  .menu__title { font-size: 32px; }
+}

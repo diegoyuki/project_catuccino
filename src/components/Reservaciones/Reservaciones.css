@@ -1,0 +1,151 @@
+.reservations {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #f5f6f7 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.reservations::before {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  left: -50px;
+  width: 400px;
+  height: 400px;
+  background: rgba(188, 158, 130, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.reservations__background-decoration {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: rgba(223, 205, 182, 0.15);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.reservations__container {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.reservations__card {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 40px;
+  box-shadow: 0 25px 70px rgba(74, 58, 53, 0.08);
+  border: 1px solid rgba(223, 205, 182, 0.3);
+}
+
+.reservations__tag {
+  display: inline-block;
+  background: rgba(188, 158, 130, 0.1);
+  color: #bc9e82;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.reservations__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #1a1b22;
+  margin-bottom: 15px;
+}
+
+.reservations__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #665a57;
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+
+.reservations__group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.reservations__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reservations__field label {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a3a35;
+}
+
+.reservations__field input, 
+.reservations__field select {
+  padding: 18px;
+  border-radius: 16px;
+  border: 2px solid #f0f0f0;
+  background: #fdfdfd;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.reservations__field input:focus, 
+.reservations__field select:focus {
+  border-color: #bc9e82;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(188, 158, 130, 0.05);
+  outline: none;
+}
+
+.reservations__submit {
+  width: 100%;
+  background: #1a1b22;
+  color: #fff;
+  padding: 22px;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-top: 20px;
+}
+
+.reservations__submit:hover {
+  background: #bc9e82;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(188, 158, 130, 0.2);
+}
+
+.reservations__arrow {
+  transition: transform 0.3s ease;
+}
+
+.reservations__submit:hover .reservations__arrow {
+  transform: translateX(8px);
+}
+
+@media screen and (max-width: 768px) {
+  .reservations__card { padding: 40px 25px; }
+  .reservations__group { grid-template-columns: 1fr; }
+  .reservations__title { font-size: 32px; }
+}

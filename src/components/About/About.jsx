@@ -1,38 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './About.css';
+import aboutImg from '../../images/about-cat.webp';
 
 function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about__container">
-        <h2 className="about__title">Sobre Catuccino</h2>
         <div className="about__content">
-          <div className="about__text-container">
-            <p className="about__paragraph">
-              Catuccino es mucho más que una cafetería en Monterrey; es un refugio 
-              donde el aroma del café recién hecho se mezcla con el ronroneo de 
-              nuestros residentes felinos.
-            </p>
-            <p className="about__paragraph">
-              Nuestra misión es proporcionar un espacio seguro y amoroso para gatos 
-              rescatados mientras buscan su hogar definitivo. Cada taza de café 
-              que disfrutas ayuda directamente al cuidado, salud y bienestar de 
-              nuestros michis.
-            </p>
-            <p className="about__paragraph">
-              Ven a relajarte, trabajar o simplemente a conocer a tu próximo mejor 
-              amigo. Todos nuestros gatos están listos para ser adoptados por 
-              personas responsables que quieran cambiar una vida.
-            </p>
-          </div>
-          <div className="about__image-container">
-            <img 
-              src="../../images/about-cats.jpg" 
-              alt="Gatos en Catuccino" 
-              className="about__image" 
-            />
-          </div>
+          <h2 className="about__title">Nuestra Misión</h2>
+          <p className="about__text">
+            Catuccino es un refugio diseñado para gatos y para que quienes nos visiten por primera vez se sientan como en casa.
+          </p>
+          <p className="about__text">
+            Nuestra misión principal es proporcionar un espacio relajante y de curación donde las personas y los gatos puedan pasar un tiempo feliz juntos, ofreciendo un escape sereno del bullicio de la vida urbana.
+          </p>
+          <Link to="/moreabout" className="about__button">Conocer más</Link>
         </div>
+        <img src={aboutImg} alt="Gato en Catuccino" className="about__image" />
       </div>
     </section>
   );

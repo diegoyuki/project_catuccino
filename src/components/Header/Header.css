@@ -1,75 +1,142 @@
 .header {
-  height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0;
 }
 
 .header__container {
   max-width: 1280px;
   width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__logo {
+.header__logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.header__logo-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.header__logo-text {
   font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
 }
 
-.header__logo:hover {
-  opacity: 0.7;
-}
-
-.header__menu {
+.header__nav {
   display: flex;
   align-items: center;
   gap: 34px;
 }
 
-.header__login-button {
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 100px;
-  padding: 12px 20px;
+.header__link {
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
-.header__login-button:hover {
+.header__link:hover {
+  opacity: 0.7;
+}
+
+.header__support-button {
+  background-color: #dfcdb6;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.header__support-button:hover {
+  background-color: #bc9e82;
+  transform: scale(1.05);
+}
+
+.header_dark-mode {
+  position: relative; 
   background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+}
+
+.header__link_dark {
+  color: #1a1b22 !important; 
+}
+
+.header_dark-mode .header__logo-text {
   color: #1a1b22;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo-text {
+    display: none;
+  }
+  .header__nav {
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .header {
-    height: 56px;
+    padding: 10px 0;
   }
-
-  .header__menu {
-    gap: 16px;
+  .header__logo-image {
+    width: 50px;
+    height: 50px;
   }
-
-  .header__login-button {
-    font-size: 14px;
-    padding: 8px 16px;
+  .header__nav {
+    gap: 12px;
   }
+  .header__link {
+    font-size: 13px;
+  }
+  .header__support-button {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
 
-  .header__logo {
-    font-size: 16px;
+@media screen and (max-width: 480px) {
+  .header__container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 256px) {
+  .header__nav {
+    gap: 5px;
+  }
+  .header__link {
+    font-size: 11px;
+  }
+  .header__support-button {
+    padding: 6px 10px;
+    font-size: 11px;
   }
 }
